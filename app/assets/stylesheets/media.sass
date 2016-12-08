@@ -1,0 +1,129 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  /**/
+
+
+@media only screen and (max-width : 992px)
+  /**/
+  
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  /**/
+  body
+    .fixed-header
+      width: 100%
+      position: relative
+      .first-head
+        h3
+          margin: 0
+        .main-logo
+          white-space: nowrap
+          margin-top: 5px
+          font-size: 45px
+          display: block 
+          text-align: center
+          margin-bottom: 0
+        .media-left
+          float: left
+          padding-left: 35px
+        .media-right
+          text-align: right
+          padding-right: 35px
+      .second-head
+        padding-top: 30px
+        text-align: center
+        margin-bottom: 10px
+        li
+          display: inline-block
+          padding-top: 20px
+          padding-right: 20px
+          padding-right: 20px
+      .social-head
+        text-align: center
+        li
+          display: inline-block
+        &:after
+          content: ''
+          display: inline-block
+          margin-bottom: -15px
+          height: 2px
+          width: 280px
+          background-color: #111
+
+  /*Disable Animation on Mobile Devices*/
+  .animated
+    /*CSS transitions*/
+    -o-transition-property: none !important
+    -moz-transition-property: none !important
+    -ms-transition-property: none !important
+    -webkit-transition-property: none !important
+    transition-property: none !important
+    /*CSS transforms*/
+    -o-transform: none !important
+    -moz-transform: none !important
+    -ms-transform: none !important
+    -webkit-transform: none !important
+    transform: none !important
+    /*CSS animations*/
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  /**/
+  body
+    .fixed-header
+      position: relative
+      .first-head
+        
+        h3
+          margin: 0
+          font-size: 15px
+        .main-logo
+          white-space: nowrap
+          margin-top: 5px
+          font-size: 32px
+      .second-head
+        padding-top: 0
+         
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/
+
