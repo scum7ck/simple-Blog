@@ -5,7 +5,7 @@ gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
-
+gem 'bcrypt'
 
 
 
@@ -13,9 +13,6 @@ gem 'bootstrap-sass'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
-
-
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
