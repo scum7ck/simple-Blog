@@ -8,9 +8,9 @@
     </div>
 
 
-    <div class="col-sm-4 col-sm-offset-4 articles-new">
+    <% if logged_in? %><div class="col-sm-4 col-sm-offset-4 articles-new">
       <p><%= link_to 'New article', new_article_path %></p> 
-    </div>
+    </div><% end %>
     <div class="articles-wrap">
       <% @articles.each do |article| %>
       <div class="col-sm-4 col-sm-offset-4 articles-item">
@@ -18,9 +18,9 @@
 
         <h2><%= article.title %></h2>
         <p><%= article.text %></p>
-        <p><%= link_to 'Show', article_path(article) %> | <%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Destroy', article_path(article),
+        <p><%= link_to 'Show', article_path(article) %> <% if logged_in? %>| <%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Destroy', article_path(article),
           method: :delete,
-          data: { confirm: 'Are you sure?' } %></p>
+          data: { confirm: 'Are you sure?' } %><% end %></p>
 
 
         </div>

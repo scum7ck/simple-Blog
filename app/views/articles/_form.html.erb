@@ -1,5 +1,5 @@
 <div class="article-form">
-<%= form_for @article do |f| %>
+<%= form_for @article, html: { multipart: true } do |f| %>
 
 <% if @article.errors.any? %>
   <div id="error_explanation">
@@ -26,6 +26,7 @@
     <%= f.text_area :text, class: "article-text-form" %>
   </p>
 
+  <p><%= f.file_field :image %></p>
   <p>
     <%= f.submit 'Update', class: "submit-button button" %>
   </p>

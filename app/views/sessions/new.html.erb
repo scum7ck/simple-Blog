@@ -1,0 +1,25 @@
+<div class="log-in">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 log-in-head"><h1>log in</h1></div>
+  </div>
+
+  <div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <%= form_for(:sessions, url: login_path) do |f| %>
+      <%= f.label :email, class: 'log-in-email-label' %> <br>
+      <%= f.email_field :email, class: 'form-control log-in-email-form' %> <br>
+
+      <%= f.label :password, class: 'log-in-password-label' %>  <br>  
+      <%= f.password_field :password, class: 'form-control log-in-password-form' %>
+
+      <%= f.submit "Log in", class: "log-in-submit-button" %>
+    <% end %>
+
+  </div>
+</div>
+</div>
+
+
+
+</div>
