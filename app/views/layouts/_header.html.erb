@@ -3,18 +3,18 @@
 
 
       <div class="first-head">
-        <h1 class="main-logo">Valentin Ternow</h1> <br>
+        <h1 class="main-logo"><%= link_to "Valentin Ternow", root_path %></h1> <br>
         <li class="media-left"><h3>Full-stack<br>
                 rails developer</h3></li>
-        <li class="media-right"><h3>Youtube-blogger <br>
+        <li class="media-right"><h3>& a little bit <br>
         student</h3></li>
       </div>
 
 
       <div class="second-head">
-        <li><a href="#">Works</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="https://github.com/scum7ck?tab=repositories">Works</a></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contacts", contacts_path %></li>
         <% if logged_in? %>
         <li><%= link_to "Log out", logout_path, method: "delete" %></li>
         <% end %>
@@ -22,9 +22,9 @@
 
       <div class="social-head">
         <li>
-          <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-          <li></li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-          <li></li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a> <br>
+          <a href="https://vk.com/dfkz1"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+          <li></li><a href="https://telegram.me/Ternow"><i class="fa fa-paper-plane" aria-hidden="true"></i></a> 
+          <li></li><a href="https://github.com/scum7ck"><i class="fa fa-github-alt" aria-hidden="true"></i></a> <br>
         
       </div>
 

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'static_pages/works'
-
+  get '/works', to: 'static_pages#works'
+  get '/about', to: 'static_pages#about'
+  get 'contacts', to: 'static_pages#contacts'
   get 'static_pages/about'
 
   get 'static_pages/contacts'
 
-  resources :dragonfly_images
   root 'articles#index'
 
   get '/signup', to: 'admin#new'
