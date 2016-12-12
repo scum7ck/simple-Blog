@@ -8,8 +8,6 @@ Rails.application.routes.draw do
 
   root 'articles#index'
 
-  get '/signup', to: 'admins#new'
-
   resources :articles do
     resources :comments
   end
