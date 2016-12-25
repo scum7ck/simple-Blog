@@ -10,7 +10,7 @@ Dragonfly.app.configure do
 
   datastore :file,
     root_path: Rails.root.join('public/system/dragonfly', Rails.env),
-    server_root: Rails.root.join('public')
+    server_root: Rails.root.join('public/system/dragonfly', Rails.env)
 end
 
 # Logger

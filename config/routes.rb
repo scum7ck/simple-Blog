@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get '/upload/get', to: 'upload#get'
+  get '/upload/show', to: 'upload#show'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

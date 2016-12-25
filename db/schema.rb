@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211101559) do
+ActiveRecord::Schema.define(version: 20161225130220) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "name"
@@ -25,10 +25,14 @@ ActiveRecord::Schema.define(version: 20161211101559) do
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "image_uid"
     t.string   "image_name"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -45,6 +49,13 @@ ActiveRecord::Schema.define(version: 20161211101559) do
     t.string   "asset_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string "comment"
+    t.string "name"
+    t.string "content_type"
+    t.binary "data",         limit: 1048576
   end
 
 end
